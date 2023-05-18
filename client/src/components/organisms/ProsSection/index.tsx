@@ -29,14 +29,14 @@ const ProsSection: FC = () => {
   return (
     <StyledProsSection>
       <StyledProsContainer>
-        <Icon img="public\images\icons\cosigner.png" />
+        <Icon img="\images\icons\cosigner.png" />
         <Title size="1rem" margin="10px 0 0">
           No cosigner, no problem
         </Title>
         <Text size="1rem">You may pre-qualify with or without a cosigner.</Text>
       </StyledProsContainer>
       <StyledProsContainer>
-        <Icon img="public\images\icons\income.png" />
+        <Icon img="\images\icons\income.png" />
         <Title size="1rem" margin="10px 0 0">
           No income necessary
         </Title>
@@ -45,7 +45,7 @@ const ProsSection: FC = () => {
         </Text>
       </StyledProsContainer>
       <StyledProsContainer>
-        <Icon img="public\images\icons\credit_history.png" />
+        <Icon img="\images\icons\credit_history.png" />
         <Title size="1rem" margin="10px 0 0">
           No credit history needed
         </Title>
@@ -54,7 +54,7 @@ const ProsSection: FC = () => {
         </Text>
       </StyledProsContainer>
       <StyledProsContainer>
-        <Icon img="public\images\icons\timer.png" />
+        <Icon img="\images\icons\timer.png" />
         <Title size="1rem" margin="10px 0 0">
           Pre-qualify quickly
         </Title>
