@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Text from "../../atoms/Text";
 import Title from "../../atoms/Title";
 import Icon from "../../atoms/Icon";
+import Searchbar from "../../organisms/Searchbar";
 
 const StyledMainscreen = styled.div`
   display: flex;
@@ -24,28 +25,38 @@ const StyledBenefits = styled.div`
   margin: 32px 0 0;
 `;
 
-const StyledSearchbar = styled.div`
+const StyledLoanContainer = styled.div`
+  margin: 100px 0 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: gray;
-  box-shadow: 0px 24px 40px rgba(21, 26, 37, 0.1);
-  border-radius: 36px;
-  width: 508px;
-  height: 72px;
-  margin: 32px 0 0;
+  flex-flow: column;
 `;
 
-const StyledLoanImage = styled.img`
-  src: "";
+const StyledLoanBox = styled.div`
+  background: white;
+  border-radius: 16px;
+  width: 420px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 30px 25px;
+
+  margin-bottom: 12px;
+
+  &.special-background {
+    justify-content: initial;
+    flex-direction: column;
+    border: 0.5px solid white;
+    background: linear-gradient(
+      rgb(36 243 35 / 27%) 52.94%,
+      rgba(114, 233, 120, 0.5) 100%
+    );
+  }
 `;
 
-const StyledLoanContainer = styled.div`
-  margin: 50px 0 0;
-  background: #c7c7c7;
+const StyledLoanCondition = styled.div`
+  margin-left: 15px;
 `;
-
-const StyledProsSection = styled.div``;
 
 const Mainscreen: FC = () => {
   return (
@@ -71,9 +82,7 @@ const Mainscreen: FC = () => {
           Pre-qualify with 17+ student lenders across the U.S. through a single,
           three minute form.
         </Text>
-        <StyledSearchbar>
-          <Text>Pseudo-search section</Text>
-        </StyledSearchbar>
+        <Searchbar />
         <StyledBenefits>
           <Text weight="600" margin="5px 0">
             <Icon img="/images/icons/check_s.png" height="16px" width="16px" />
@@ -95,7 +104,49 @@ const Mainscreen: FC = () => {
       </StyledLeftSection>
       <StyledRightSection>
         <StyledLoanContainer>
-          <StyledLoanImage src="/images/illustration.png" />
+          <StyledLoanBox>
+            <Icon img="/images/icons/dolar-sign.png" />
+            <StyledLoanCondition>
+              <Title size="1rem">Loan size</Title>
+              <Text size="0.8rem">$15,000</Text>
+            </StyledLoanCondition>
+          </StyledLoanBox>
+          <StyledLoanBox>
+            <Icon img="/images/icons/flag-sign.png" />
+            <StyledLoanCondition>
+              <Title size="1rem">Citizenship status</Title>
+              <Text size="0.8rem">U.S. citizen or national</Text>
+            </StyledLoanCondition>
+          </StyledLoanBox>
+          <StyledLoanBox className="special-background">
+            <div className="loan-preview">
+              <Icon img="/images/icons/open-book-icon.png" />
+              <StyledLoanCondition>
+                <Title size="1rem" color="white">
+                  Stanford University
+                </Title>
+                <Text size="0.8rem" color="white">
+                  B.S | Management Science and Engineering
+                </Text>
+              </StyledLoanCondition>
+            </div>
+            <div className="loan-status">
+              <Text size="0.8rem" color="white">
+                Enrollment status
+              </Text>
+              <Text size="0.8rem" color="white">
+                Full time
+              </Text>
+            </div>
+            <div className="loan-status">
+              <Text size="0.8rem" color="white">
+                Graduation date
+              </Text>
+              <Text size="0.8rem" color="white">
+                June 2025
+              </Text>
+            </div>
+          </StyledLoanBox>
         </StyledLoanContainer>
         <Text justifyContent="end" color="#9EA9B0">
           Illustrative purposes, actual results may vary.
@@ -109,6 +160,9 @@ const Mainscreen: FC = () => {
           />
         </Text>
       </StyledRightSection>
+      <div className="green-background">
+        <img src="/images/Green-background.png" alt="" />
+      </div>
     </StyledMainscreen>
   );
 };

@@ -26,16 +26,6 @@ export const StyledButton = styled.div<ButtonProps>`
 
   background: #8cce56;
   border-radius: 28px;
-
-  /* &:hover {
-    box-shadow: 0 0 3px rgba(33, 33, 33, 0.2);
-  } */
-
-  /* &:active {
-    transform: scale(0.98);
-    background: #c5e2fc;
-    box-shadow: none;
-  } */
 `;
 
 const Button: FC<ButtonProps> = ({ children, onClick }) => {

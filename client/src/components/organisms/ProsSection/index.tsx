@@ -7,7 +7,7 @@ import Title from "../../atoms/Title";
 const StyledProsSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 56px 0 0 0;
+  margin: 80px 0 0 0;
 `;
 
 const StyledProsContainer = styled.div`

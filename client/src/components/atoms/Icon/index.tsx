@@ -18,6 +18,9 @@ const StyledIcon = styled.img`
   width: ${(props) => (props?.width ? props.width : "40px")};
   height: ${(props) => (props?.height ? props.height : "40px")};
   object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Icon: FC<IconProps> = ({ img, ...props }) => {

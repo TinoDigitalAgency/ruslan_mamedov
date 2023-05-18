@@ -117,3 +117,37 @@ a:visited {
   transform: translateX(0px);
   opacity: 1;
 }
+
+.loan-preview {
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  width: 100%;
+}
+
+.loan-status {
+  width: 100%;
+}
+
+.green-background {
+  width: 50%;
+  height: 500px;
+  /* max-height: 1200px; */
+  position: absolute;
+  top: -15%;
+  right: 0;
+  z-index: -1;
+}
+
+.green-background img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.loan-status {
+  border-top: 1px solid white;
+  margin: 10px 0;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}

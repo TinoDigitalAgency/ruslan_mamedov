@@ -6,22 +6,7 @@ import styled from "styled-components";
 
 // Import Swiper styles
 import "swiper/css";
-import { useEffect, useState } from "react";
-
-const StyledSliderContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  /* width: 1160px; */
-  margin: 50px 0 20px;
-`;
-
-const StyledSlider = styled.div`
-  position: relative;
-  width: 100%;
-  height: 396px;
-  overflow: hidden;
-`;
+import {  useState } from "react";
 
 const StyledSliderSlide = styled.div`
   width: 100%;
@@ -100,12 +85,6 @@ const Testemonials = () => {
   const [swiper, setSwiper] = useState<any>(null);
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
-  // useEffect(() => {
-  //   if (swiper) {
-  //     console.log(`Swiper init`, swiper);
-  //   }
-  // }, [swiper]);
-
   const handleThumbClick = (e: any) => {
     thumbsSwiper.slides[thumbsSwiper.activeIndex].classList.remove(
       "swiper-slide-thumb-active"
@@ -132,8 +111,6 @@ const Testemonials = () => {
     e.slides[e.activeIndex]
       .querySelector(".styled-label")
       .classList.add("styled-label-active");
-
-    // console.log(e.slides[e.activeIndex].querySelector(".styled-label"));
   };
 
   return (
@@ -145,10 +122,10 @@ const Testemonials = () => {
         onSwiper={(swiper: any) => {
           return setSwiper(swiper);
         }}
-        // autoplay={{
-        //   delay: 10000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 8000,
+          disableOnInteraction: false,
+        }}
         effect={"fade"}
         modules={[EffectFade, Pagination, FreeMode, Thumbs, Autoplay]}
         className="mySwiper2"

@@ -14,11 +14,9 @@ const StyledSignInButton = styled(StyledButton)`
   font-size: 1rem;
   transition: 0.3s ease-in-out;
   opacity: 0.8;
-  /* background: hsla(0, 0%, 100%, 0.2); */
 
   &:hover {
-    opacity: 0.5;
-    /* background: hsla(0, 0%, 100%, 0.4); */
+    opacity: 1;
   }
 `;
 

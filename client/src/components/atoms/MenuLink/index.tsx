@@ -19,19 +19,6 @@ const StyledMenuLink = styled.li`
   padding: 4px 0;
   user-select: none;
 
-  /* &::before {
-    content: "";
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: #fff;
-    transition: 0.5s transform ease;
-    transform: scaleX(0);
-    transform-origin: 0 100%;
-  } */
-
   &:hover {
     &::before {
       transform: scaleX(1);

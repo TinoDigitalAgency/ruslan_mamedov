@@ -12,7 +12,6 @@ const StyledLogo = styled.div`
   width: 150px;
   mix-blend-mode: difference;
   background: url(${LogoImage}) no-repeat;
-
   cursor: pointer;
 `;
 
