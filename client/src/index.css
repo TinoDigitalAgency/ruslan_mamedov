@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap");
+@import url(./burger.css);
 
 #root {
   max-width: 1280px;
+  padding: 0 20px;
   margin: 0 auto;
   width: 100%;
 }
@@ -150,4 +152,115 @@ a:visited {
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
+}
+
+.burger-container {
+  display: none;
+}
+
+@media screen and (max-width: 1368px) {
+  .green-background {
+    width: 55%;
+    height: 500px;
+    top: 0;
+    right: 0;
+  }
+
+  .swiper {
+    box-sizing: border-box;
+  }
+
+  .swiper-slider-thumb {
+    width: 100%;
+  }
+
+  .swiper-slider-thumb > * {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .styled-loan-box {
+    border: rgba(21, 26, 37, 0.1) solid 1px !important;
+  }
+
+  .special-background {
+    background: linear-gradient(
+      rgba(44, 168, 44, 0.705) 52.94%,
+      rgba(114, 233, 120, 0.747) 100%
+    ) !important;
+  }
+
+  .styled-search-bar {
+    margin: 20px 0 0 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .styled-nav-menu {
+    display: none !important;
+  }
+
+  .styled-button-group {
+    display: none !important;
+  }
+
+  .burger-container {
+    display: flex!important;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    
+  }
+
+  .styled-loan-box {
+    width: 360px !important;
+  }
+
+  .green-background {
+    width: 55%;
+    height: 500px;
+    top: 0;
+    right: 0;
+    opacity: 0.3;
+  }
+
+  .styled-main-screen {
+    flex-direction: column;
+  }
+
+  .styled-left-section {
+    width: 100% !important;
+  }
+
+  .styled-right-section {
+    width: 100% !important;
+  }
+
+  .styled-pros-section {
+    grid-template-columns: 1fr !important;
+    grid-gap: 30px;
+  }
+
+  .styled-loan-container {
+    margin: 30px 0 0 0 !important;
+  }
+
+  .custom-styled-label {
+    padding: 60px 1px 1px 20px !important;
+  }
+
+  .custom-styled-label::before {
+    top: 10px !important;
+    left: 15px !important;
+  }
+
+  .styled-narative {
+    width: fit-content !important;
+  }
+
+  .dTNfEK {
+    margin: 20px 0 0 0 !important;
+  }
 }

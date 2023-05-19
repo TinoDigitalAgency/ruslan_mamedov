@@ -12,11 +12,13 @@ const StyledMainscreen = styled.div`
 const StyledLeftSection = styled.div`
   flex-grow: 1;
   width: 50%;
+  box-sizing: border-box;
 `;
 
 const StyledRightSection = styled.div`
   flex-grow: 1;
   width: 50%;
+  box-sizing: border-box;
 `;
 
 const StyledBenefits = styled.div`
@@ -48,8 +50,8 @@ const StyledLoanBox = styled.div`
     flex-direction: column;
     border: 0.5px solid white;
     background: linear-gradient(
-      rgb(36 243 35 / 27%) 52.94%,
-      rgba(114, 233, 120, 0.5) 100%
+      rgba(44, 168, 44, 0.705) 52.94%,
+      rgba(114, 233, 120, 0.747) 100%
     );
   }
 `;
@@ -60,8 +62,8 @@ const StyledLoanCondition = styled.div`
 
 const Mainscreen: FC = () => {
   return (
-    <StyledMainscreen>
-      <StyledLeftSection>
+    <StyledMainscreen className="styled-main-screen">
+      <StyledLeftSection className="styled-left-section">
         <Text
           color="rgba(109, 179, 83, 1)"
           size="1.1rem"
@@ -78,6 +80,7 @@ const Mainscreen: FC = () => {
           size="1rem"
           weight="500"
           margin="24px 90px 0 0"
+          
         >
           Pre-qualify with 17+ student lenders across the U.S. through a single,
           three minute form.
@@ -102,23 +105,23 @@ const Mainscreen: FC = () => {
           </Text>
         </StyledBenefits>
       </StyledLeftSection>
-      <StyledRightSection>
-        <StyledLoanContainer>
-          <StyledLoanBox>
+      <StyledRightSection className="styled-right-section">
+        <StyledLoanContainer className="styled-loan-container">
+          <StyledLoanBox className="styled-loan-box">
             <Icon img="/images/icons/dolar-sign.png" />
             <StyledLoanCondition>
               <Title size="1rem">Loan size</Title>
               <Text size="0.8rem">$15,000</Text>
             </StyledLoanCondition>
           </StyledLoanBox>
-          <StyledLoanBox>
+          <StyledLoanBox className="styled-loan-box">
             <Icon img="/images/icons/flag-sign.png" />
             <StyledLoanCondition>
               <Title size="1rem">Citizenship status</Title>
               <Text size="0.8rem">U.S. citizen or national</Text>
             </StyledLoanCondition>
           </StyledLoanBox>
-          <StyledLoanBox className="special-background">
+          <StyledLoanBox className="styled-loan-box special-background">
             <div className="loan-preview">
               <Icon img="/images/icons/open-book-icon.png" />
               <StyledLoanCondition>

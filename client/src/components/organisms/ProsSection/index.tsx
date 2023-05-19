@@ -27,7 +27,7 @@ const StyledProsContainer = styled.div`
 
 const ProsSection: FC = () => {
   return (
-    <StyledProsSection>
+    <StyledProsSection className="styled-pros-section">
       <StyledProsContainer>
         <Icon img="\images\icons\cosigner.png" />
         <Title size="1rem" margin="10px 0 0">

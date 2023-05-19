@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 // Import Swiper styles
 import "swiper/css";
-import {  useState } from "react";
+import { useState } from "react";
 
 const StyledSliderSlide = styled.div`
   width: 100%;
@@ -122,10 +122,10 @@ const Testemonials = () => {
         onSwiper={(swiper: any) => {
           return setSwiper(swiper);
         }}
-        autoplay={{
-          delay: 8000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 8000,
+        //   disableOnInteraction: false,
+        // }}
         effect={"fade"}
         modules={[EffectFade, Pagination, FreeMode, Thumbs, Autoplay]}
         className="mySwiper2"
@@ -133,9 +133,9 @@ const Testemonials = () => {
         <SwiperSlide>
           <StyledSliderSlide>
             <StyledSlideImage src="/images/versities/csm_la-sierra-spring-fall-2021_01_ad2e17cd79.webp" />
-            <StyledLabel>
+            <StyledLabel className="custom-styled-label">
               <div className="styled-label styled-label-active">
-                <StyledNarative>
+                <StyledNarative className="styled-narative">
                   Sparrow has saved our team, students, and parents countless
                   hours of headache and stress. It eliminates the guessing game.
                   It’s a tested platform we trust.
@@ -151,9 +151,9 @@ const Testemonials = () => {
         <SwiperSlide>
           <StyledSliderSlide>
             <StyledSlideImage src="/images/versities/image-6344351.webp" />
-            <StyledLabel>
+            <StyledLabel className="custom-styled-label">
               <div className="styled-label">
-                <StyledNarative>
+                <StyledNarative className="styled-narative">
                   We now have great confidence that our students will find the
                   most affordable financing options. Sparrow made that possible.
                 </StyledNarative>
@@ -168,9 +168,9 @@ const Testemonials = () => {
         <SwiperSlide>
           <StyledSliderSlide>
             <StyledSlideImage src="/images/versities/img1.webp" />
-            <StyledLabel>
+            <StyledLabel className="custom-styled-label">
               <div className="styled-label">
-                <StyledNarative>
+                <StyledNarative className="styled-narative">
                   Sparrow has saved our team, students, and parents countless
                   hours of headache and stress. It eliminates the guessing game.
                   It’s a tested platform we trust.
@@ -186,9 +186,9 @@ const Testemonials = () => {
         <SwiperSlide>
           <StyledSliderSlide>
             <StyledSlideImage src="/images/versities/img2.webp" />
-            <StyledLabel>
+            <StyledLabel className="custom-styled-label">
               <div className="styled-label">
-                <StyledNarative>
+                <StyledNarative className="styled-narative">
                   We now have great confidence that our students will find the
                   most affordable financing options. Sparrow made that possible.
                 </StyledNarative>
@@ -208,17 +208,21 @@ const Testemonials = () => {
         onClick={handleThumbClick}
         className="thumbsSlider"
       >
-        <SwiperSlide className="swiper-slide-thumb-active">
+        <SwiperSlide className="swiper-slide-thumb-active swiper-slider-thumb">
           <img src="/images/versities/kindpng_270292-1.webp" alt="" />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiper-slider-thumb">
           <img src="/images/versities/pacific-without-mask.webp" alt="" />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiper-slider-thumb">
           <img src="/images/versities/pitzer-without-mask.webp" alt="" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src="/images/versities/wooster-without-mask.webp" alt="" />
+        <SwiperSlide className="swiper-slider-thumb">
+          <img
+            style={{}}
+            src="/images/versities/wooster-without-mask.webp"
+            alt=""
+          />
         </SwiperSlide>
       </Swiper>
     </div>

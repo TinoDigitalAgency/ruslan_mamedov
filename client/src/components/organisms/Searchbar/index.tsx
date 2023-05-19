@@ -26,7 +26,7 @@ const StyledTextContainer = styled.div`
 
 const Searchbar: FC = () => {
   return (
-    <StyledSearchbar>
+    <StyledSearchbar className="styled-search-bar">
       <StyledTextContainer>
         <Text color="rgba(21, 26, 37, 1)" weight="300">
           How much do you want to borrow?

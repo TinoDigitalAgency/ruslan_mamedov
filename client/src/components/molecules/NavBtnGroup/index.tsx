@@ -10,7 +10,7 @@ const StyledBtnGroup = styled.div`
 
 const NavBtnGroup: FC = () => {
   return (
-    <StyledBtnGroup>
+    <StyledBtnGroup className="styled-button-group">
       <SignInButton />
     </StyledBtnGroup>
   );
